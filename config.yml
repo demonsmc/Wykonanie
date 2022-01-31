@@ -1,0 +1,93 @@
+# Konfiguracja wykonana przez kamipl1#4715        #
+###################################################
+#               WYPLATY                           #
+###################################################
+
+configuration-version: 12 # Nie ruszac.
+
+debug-log: false
+disabled_in_worlds:
+- "creative_world"
+
+afk_payout: false
+afk_payout_percent: 10
+afk_use_essentials: false
+
+display-messages-in-chat: false
+display-messages-in-actionbar: true
+display-messages-in-actionbar-time: 7
+give_money_every_second: 1800
+store-money-in-bank: false # Nie ruszac.
+
+allow-multiple-accounts: true
+max-multiple-accounts: 1
+bank-account: ""
+choose-payout-by-chance: false
+merge-payouts: false
+
+    
+###################################################
+#               WYPLATY                           #
+###################################################
+
+payouts:
+  gracz:
+    payout_amount: 100
+    max_payout_per_day: 300
+    permission: czas.gracz
+  vip:
+    payout_amount: 150
+    max_payout_per_day: 550
+    permission: czas.vip
+  vip+:
+    payout_amount: 200
+    max_payout_per_day: 600
+    permission: czas.vipplus
+  mvp:
+    payout_amount: 300
+    max_payout_per_day: 900
+    permission: czas.mvp
+  mvp+:
+    payout_amount: 400
+    max_payout_per_day: 1200
+    permission: czas.mvpplus
+
+    
+
+###################################################
+#               WIADOMOSCI                        #
+###################################################
+
+message: "&aDostales &6%money% &aza 10 minut aktywnosci, oby tak dalej!"
+message_payoutlimit_reached: "&cOsiagnoles dzienny limit 300$, teraz nie dostales nic!"
+message_afk: "&cNie dostales wyplaty, poniewaz byles &cafk!"
+message_afk_payout: "&6You earned &c%money% (%percent%% of normal payout) &6for 10 minutes online time while afk!" #Funkcja  zablokowana -  zbędne.
+message_multiple_ips: "&cYou havn't earned money because you're playing with multiple accounts!"
+message_actionbar: "&aDostales &6%money% &aza 10 minut aktywnosci, oby tak dalej!"
+message_payoutlimit_reached_actionbar: "&cOsiagnoles dzienny limit, teraz nie dostales nic!"
+message_afk_actionbar: "&cNie dostales wyplaty, poniewaz byles &cafk!" #Funkcja  zablokowana -  zbędne.
+message_afk_actionbar_payout: "&6You earned &c%money% &6for 10 minutes online time while afk!" #Funkcja  zablokowana -  zbędne.
+message_atm_noperms: "&cYou don't have the permission to use ATM's!" #Funkcja  zablokowana -  zbędne.
+message_atm_nomoneyinbank: "&cYou don't have enough money in bank!" #Funkcja  zablokowana -  zbędne.
+message_atm_nomoney: "&cYou don't have enough money!" #Funkcja  zablokowana -  zbędne.
+message_atm_nopermbuild: "&cYou don't have permissions to build ATM's (tim.atm.place)" #Funkcja  zablokowana -  zbędne.
+message_atm_created: "&2ATM created! (You can also write something in the Lines 2-4)" #Funkcja  zablokowana -  zbędne.
+message_atm_withdrew: "&cTook &a%s &cfrom your account." #Funkcja  zablokowana -  zbędne.
+message_atm_deposited: "&2Added &a%s &2to your account." #Funkcja  zablokowana -  zbędne.
+
+display-payout-limit-reached-message-once: true
+
+
+###################################################
+#               BANKOMAT                          #
+###################################################
+
+enable_atm: false
+atm_sign_label: "&cATM"
+atm_worth_gradation:
+  - 10.0
+  - 100.0
+  - 1000.0
+  - 10000.0
+ 
+group-atms: false
