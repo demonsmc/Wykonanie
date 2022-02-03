@@ -1,0 +1,55 @@
+# Slots of the GUI
+slots: 45
+
+# Title of the GUI
+title: "&dMENU SERWER"
+
+# Automatically update open inventories.
+# This can be used to update placeholders in the GUI.
+refresh:
+  enabled: false
+  rate: 40
+
+# The items inside the GUI can be listed here
+items:
+  filler:
+    material: PINK_STAINED_GLASS_PANE
+    slot: -1 # Setting the slot to -1 will fill every empty slot, you can also do "slots: [0, 1, 2]"
+  megadrop:
+    material: TNT
+    slot: 20
+    amount: 1
+    glow: true
+    display_name: '&e&lMEGADROP &8[&c1.8.8-1.16.5&8]'
+    lore:
+      - '&7Dolacz teraz!'
+    actions:
+      - '[CLOSE]'
+      - '[MESSAGE] &7Przenoszenie na tryb: &eMEGADROP'
+      - '[BUNGEE] megadrop'
+      # For multi-world servers using Multiverse-Core, use the action:
+      # - '[CONSOLE] mvtp %player% world'
+  survival:
+    material: GRASS_BLOCK
+    slot: 24
+    amount: 1
+    glow: true
+    display_name: '&a&lSurvival + Dzialki &8[&c1.16.5&8]'
+    lore:
+      - '&7Dolacz teraz!'
+    actions:
+      - '[CLOSE]'
+      - '[MESSAGE] &7Przenoszenie na tryb: &eSurvival + Dzialki'
+      - '[BUNGEE] survival'
+  skyblock:
+    material: BUCKET
+    slot: 22
+    amount: 1
+    glow: true
+    display_name: '&b&lSKYBLOCK'
+    lore:
+      - '&7Dolacz teraz!'
+    actions:
+      - '[CLOSE]'
+      - '[MESSAGE] &7Przenoszenie na tryb: &eSKYBLOCK'
+      - '[BUNGEE] skyblock'

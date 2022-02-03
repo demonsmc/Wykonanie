@@ -1,0 +1,310 @@
+check-updates: true
+
+disabled-worlds:
+  invert: false
+  worlds:
+    - world_nether
+
+anti_wdl:
+  enabled: true
+
+  # Should players with 'deluxehub.antiwdl.alert' will be notified?
+  notify_admins: true
+
+scoreboard:
+  # Should the scoreboard feature be enabled?
+  enabled: true
+
+  # Should we delay showing the scoreboard?
+  # Value in ticks (20 ticks = 1 second), 0 to disable
+  display_delay:
+    server_enter: 60 # 3 seconds
+    world_change: 40 # 2 seconds
+
+  # Should we refresh the scoreboard (update placeholders)?
+  refresh:
+    enabled: true
+    rate: 200 # In ticks (20 ticks = 1 second)
+
+  title: "&anazwa.pl &7ツ"
+  lines:
+    - ""
+    - " &8◆ &7Dostepne tryby:"
+    - ""
+    - "&aTRYB 1"
+    - "&aTRYB 2"
+    - "&aTRYB 3"
+    - ""
+    - " &8◆ &7Nasze media:"
+    - ""
+    - "&7Discord: &fdc.nazwa.pl"
+    - "&7Facebook: &ffb.nazwa.pl"
+    - "&7YouTube: &fyt.nazwa.pl"
+    - ""
+    - "&7www.nazwa.pl"
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# |TABLIST                                   |
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+tablist:
+  # Should the tablist feature be enabled?
+  enabled: true
+
+  # Should we refresh the tablist (update placeholders)?
+  refresh:
+    enabled: true
+    rate: 400 # In ticks (20 ticks = 1 second)
+
+  # Modify the header of the tablist
+  header:
+    - ""
+    - "&anazwa.pl"
+    - "&7Graczy online: &f%bungee_total%"
+    - ""
+    - "&7Witaj &f%player_name% &7na lobby serwerowym!"
+    - "&eKliknij kompas, aby wybrac tryb, na którym zagrasz!"
+    - ""
+
+  # Modify the footer of the tablist
+  footer:
+    - ""
+    - "&7Ping: &f%player_colored_ping%"
+    - "&7Godzina: &f%localtime_time%"
+    - ""
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# | AUTO BROADCAST                           |
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+announcements:
+  # Should the announcements system be enabled ?
+  enabled: false
+
+  # Delay to send announcements (in seconds)
+  delay: 120
+
+  # How many players should be required to send announcements?
+  required_players: 1
+
+  sound:
+    enabled: true
+    value: BLOCK_NOTE_BLOCK_PLING
+    volume: 1.0
+    pitch: 1.0
+
+  # Announcement list
+  announcements:
+    test1:
+      - "&r"
+      - "<center>&e&lOGLOSZENIE</center>"
+      - "<center>&7Odwiedz nasza strone www.nazwa.pl!</center>"
+      - "&r"
+    test3:
+      - "&r"
+      - "<center>&e&lOGLOSZENIE</center>"
+      - "<center>&7Zyczymy milej zabawy!</center>"
+      - "&r"
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# | LAUNCHPAD                                |
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+launchpad:
+  # Should the launchpad feature be enabled ?
+  enabled: false
+
+  # Launch power for launchpad (max 4.0)
+  launch_power: 3.0
+  launch_power_y: 1.0
+
+  # Top and bottom block required to make a launchpad
+  top_block: STONE_PRESSURE_PLATE
+  bottom_block: REDSTONE_BLOCK
+
+  # Actions executed upon use of a launchpad
+  actions:
+    - '[SOUND] ENTITY_BAT_TAKEOFF'
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# | DOUBLE JUMP                              |
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+double_jump:
+  # Should the double jump feature be enabled?
+  enabled: false
+
+  # Launch power for double jump (max 4.0)
+  launch_power: 1.0
+  launch_power_y: 0.9
+
+  # Cooldown time in seconds (0 to disable)
+  cooldown: 3
+
+  # Actions executed upon use of double jump
+  actions:
+    - '[SOUND] ENTITY_BAT_TAKEOFF'
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# | CHAT MANAGEMENT                          |
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+command_block:
+  # Should the command blocker feature be enabled?
+  enabled: false
+
+  # List of commands that will be blocked
+  blocked_commands:
+    - /pl
+    - /plugins
+    - /?
+    - /bukkit:?
+    - /bukkit:plugins
+    - /bukkit:pl
+    - /bukkit:help
+    - /ver
+    - /version
+    - /bukkit:version
+    - /bukkit:ver
+
+anti_swear:
+  # Should the anti-swear feature be enabled?
+  enabled: true
+
+  # List of words that will be blocked
+  blocked_words:
+    - fuck
+    - shit
+    - bitch
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# | WORLD EVENT SETTINGS                     |
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+world_settings:
+
+  # Player
+  disable_hunger_loss: true
+  disable_fall_damage: true
+  disable_player_pvp: true
+  disable_void_death: true
+  disable_fire_damage: true
+  disable_drowning: true
+  disable_off_hand_swap: true # Requires 1.9+
+
+  # Misc
+  disable_weather_change: true
+  disable_death_message: true
+  disable_mob_spawning: true
+
+  # Item entities
+  disable_item_drop: true
+  disable_item_pickup: true
+
+  # Blocks
+  disable_block_break: true
+  disable_block_place: true
+  disable_block_interact: false # Chest, furnace, crop tample, etc
+  disable_block_burn: true
+  disable_block_fire_spread: true
+  disable_block_leaf_decay: true
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# | PLAYER JOIN EVENT                        |
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+join_leave_messages:
+  # Should deluxehub handle join/quit messages?
+  enabled: true
+
+  # Set to '' if you want silent join/quit messages
+  join_message: ""
+  quit_message: ""
+
+# Actions executed upon join
+join_events:
+  - "[MESSAGE] &8&m+---------------***---------------+"
+  - "[MESSAGE] &r"
+  - "[MESSAGE] &8» &7Witaj &e%player_name% &7na &flobby &7serwerowym!"
+  - "[MESSAGE] &8» &7Kliknij na zegar, aby wybrac tryb, na którym zagrasz!"
+  - "[MESSAGE] &r"
+  - "[MESSAGE] &8» &7Dostepne komendy na &flobby"
+  - "[MESSAGE]  &e/register, /login, /changepassword"
+  - "[MESSAGE] &r"
+  - "[MESSAGE] &8&m+---------------***---------------+"
+  - "[TITLE] &a&lWITAJ;&f%player%;1;2;1"
+  - "[SOUND] ENTITY_PLAYER_LEVELUP"
+  - "[GAMEMODE] adventure"
+  - "[EFFECT] SPEED;1"
+
+join_settings:
+  # Should we teleport the player to the spawn point (if set) on join?
+  spawn_join: true
+  # Should we heal the player?
+  heal: true
+  # Should we extinguish the player?
+  extinguish: true
+  # Should we clear their inventory?
+  clear_inventory: true
+  # Spawn a firework on join
+  firework:
+    # Should we send a firework on join?
+    enabled: true
+    # Should we only send the firework on their first join?
+    first_join_only: true
+
+    type: BALL_LARGE
+    power: 1
+    flicker: true
+    trail: true
+    colors:
+      - AQUA
+      - RED
+      - TEAL
+      - WHITE
+
+custom_join_items:
+  # Should custom join items be enabled?
+  enabled: true
+  # Should we prevent them from moving/dropping the items?
+  disable_inventory_movement: true
+
+  items:
+    server_selector:
+      material: NETHER_STAR
+      amount: 1
+      slot: 4
+      display_name: "&a&lWYBIERZ TRYB!"
+      lore:
+        - "&7Kliknij prawym, aby wybrac serwer!"
+      actions:
+        - "[MENU] serverselector"
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# | PLAYER HIDER                             |
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+player_hider:
+  # Should the player hider feature be enabled?
+  enabled: true
+  # Slot the item should be given to?
+  slot: 8
+  # Should we prevent them from moving/dropping the item?
+  disable_inventory_movement: true
+  # Cooldown in seconds
+  # Set to 0 to disable
+  cooldown: 3
+
+  not_hidden:
+    material: LIME_DYE
+    amount: 1
+    display_name: '&aUKRYJ GRACZY &8(Kliknij Prawym)'
+    lore:
+      - '&7Kliknij, aby ukryc wszystkich graczy!'
+
+  hidden:
+    material: GRAY_DYE
+    amount: 1
+    display_name: '&aPOKAZ GRACZY &8(Kliknij Prawym)'
+    lore:
+      - '&7Kliknij, aby pokazac wszystkich graczy!'
